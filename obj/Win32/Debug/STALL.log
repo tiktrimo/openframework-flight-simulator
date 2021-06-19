@@ -1,0 +1,15 @@
+﻿  ofApp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+g:\csprodevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\libs\openframeworks\utils\ofutils.h : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+g:\csprodevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\libs\openframeworks\math\ofvec3f.h : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+g:\csprodevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\libs\openframeworks\math\ofvec2f.h : warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
+g:\csprodevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\apps\myapps\stall\src\aircraft.h(220): warning C4996: 'ofRotate': Use ofRotateDeg or ofRotateRad
+  g:\csprodevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\libs\openframeworks\graphics\ofgraphics.h(1008): note: see declaration of 'ofRotate'
+  STALL.vcxproj -> G:\csproDevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\apps\myApps\STALL\bin\STALL_debug.exe
+  
+  	                   2	G:\csproDevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\libs\fmod\lib\vs\Win32\
+  	  *추가 파일  		 6018560	G:\csproDevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\apps\myApps\STALL\bin\FreeImage.dll
+  
+  	                   1	G:\csproDevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\libs\FreeImage\lib\vs\Win32\
+  	  *추가 파일  		 1544704	G:\csproDevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\apps\myApps\STALL\bin\fmod.dll
+  	  *추가 파일  		 1733120	G:\csproDevelopment\of_v0.11.2_vs2017_release\of_v0.11.2_vs2017_release\apps\myApps\STALL\bin\fmodL.dll
