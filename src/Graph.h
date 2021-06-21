@@ -1,14 +1,19 @@
 #pragma once
 #include "ofMain.h"
 
-#define GRAPH_LENGTH 600
+#define GRAPH_LENGTH 550
 
 class Graph
 {
 public:
-	int newIndex = 0;
-	float overflowingQueue[GRAPH_LENGTH] = {0};
-	float x, y, width, height, compressRatio;
+	//data
+	float circularArr[GRAPH_LENGTH] = { 0 };
+	// data's startIndex
+	int start = 0;
+	// title of graph
+	char graphName[100];
+	// x, y: coordination of top-left point, hiddenMul : graphical scale value
+	float x, y, width, height, hiddenMul = 1;
 
 	Graph(float _x, float _y, float _width, float _height) {
 		x = _x;
@@ -17,42 +22,48 @@ public:
 		height = _height;
 	}
 
+	// insert new data. 
 	void insert(float data) {
-		if (newIndex + 1 == GRAPH_LENGTH)
-			newIndex = 0;
-		overflowingQueue[newIndex] = data;
-		newIndex++;
+		if (start == GRAPH_LENGTH )
+			start = 0;
+		circularArr[start] = data;
+		start++;
 	}
 
+	// get lambda function. execute lambda function for every data stored in circularArr
 	template<typename F>
 	void run(F &lambda) {
-		int index = newIndex;
+		int index = start;
 		while (index < GRAPH_LENGTH) {
-			lambda(overflowingQueue[index]);
+			lambda(circularArr[index]);
 			index++;
 		}
 		index = 0;
-		while (index < newIndex) {
-			lambda(overflowingQueue[index]);
+		while (index < start) {
+			lambda(circularArr[index]);
 			index++;
 		}
 	}
 
+	// draw graph.
 	void draw() {
-		int increment = ofGetWidth() / GRAPH_LENGTH;
+		int increment = 2;
 		int currX = 0;
-		float prev = 0;
+		float prev = circularArr[start] * hiddenMul;
 
+		// draw line
 		run([&prev, &currX, increment, this](float data) {
-			ofDrawLine(x + currX, y - prev, x + currX + increment, y - data);
-			prev = data;
+			ofDrawLine(x + currX, y - prev, x + currX + increment, y - data * hiddenMul);
+			prev = data * hiddenMul;
 			currX += increment;
 		});
 
+		// draw value and graph's title at end of the line
 		std::ostringstream text;
-		text << prev;
+		text << prev / hiddenMul;
 		std::string txt(text.str());
 		ofDrawBitmapString(txt, x + currX + increment, y - prev);
+		ofDrawBitmapString(graphName, x + currX + increment, y - prev - 12);
 	}
 	
 };
