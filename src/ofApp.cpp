@@ -246,7 +246,7 @@ void ofApp::draw() {
 	// update flipper
 	if (crashBlinkFlag) flipper--;
 	else flipper++;
-	
+
 }
 
 //--------------------------------------------------------------
