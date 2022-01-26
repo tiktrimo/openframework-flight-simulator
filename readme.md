@@ -1,3 +1,18 @@
+Play it by opening flightSim_Debug.exe in release zip file<br>
+C++ distribution for openframeworks v0.11.2_vs2017_release might be need.<br>
+input:<br>
+- left/right arrow : throttle
+- up/down arrow : pitch
+- 'd' : change plane
+- 'r' : restart
+- 'g' : toggle show/hide graph
+- '.' ',' : change content of graph1
+- '<' '>' : change content of graph2
+<br>
+<br>
+<br>
+
+
 **기말프로젝트**
 
 **20171703 한상민**
