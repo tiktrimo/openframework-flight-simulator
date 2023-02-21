@@ -1,4 +1,4 @@
-[![Youtube link](https://github.com/tiktrimo/EVE-Fitting.js/blob/master/DOCS/Header.png?raw=true)](https://youtu.be/OMyQAAAB2Ko)
+[![Youtube link](https://github.com/tiktrimo/openframework-flight-simulator/blob/main/images/OPFS_thumbnail.jpg?raw=true)](https://youtu.be/OMyQAAAB2Ko)
 
 Play it by opening flightSim_Debug.exe in release zip file<br>
 C++ distribution for openframeworks v0.11.2_vs2017_release might be need.<br>
